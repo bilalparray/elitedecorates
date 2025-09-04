@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elite Decorates – Crafting Memories, One Print at a Time</title>
+  <meta name="description" content="Elite Decorates: Wedding cards, bottle printing, frames, custom cups & T‑shirts. Unique designs, premium quality, fast delivery." />
+
+  <!-- Google Font (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f1221;           /* Deep navy */
+      --card: rgba(255,255,255,0.06);
+      --muted: #b8bed2;
+      --text: #eaf0ff;
+      --brand: #f1c27d;       /* Elegant gold */
+      --brand-2: #6fe4d8;     /* Teal accent */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --glass: rgba(255,255,255,.08);
+      --border: 1px solid rgba(255,255,255,.14);
+      --grad: radial-gradient(1200px 600px at 10% -10%, rgba(111,228,216,.18), transparent 50%),
+              radial-gradient(800px 400px at 110% 10%, rgba(241,194,125,.18), transparent 40%),
+              linear-gradient(180deg, #0f1221 0%, #0a0c18 100%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+      color: var(--text);
+      background: var(--grad);
+      background-attachment: fixed;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Container */
+    .container { width: min(1200px, 92%); margin-inline: auto; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(120%) blur(10px);
+      background: rgba(15,18,33,.6);
+      border-bottom: var(--border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+    .brand .logo { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); display: grid; place-items: center; box-shadow: var(--shadow); }
+    .brand span { font-weight: 700; letter-spacing: .4px; font-size: 1.1rem; }
+
+    .nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; }
+    .nav a { color: var(--muted); text-decoration: none; font-weight: 500; }
+    .nav a:hover { color: var(--text); }
+
+    .btn { appearance: none; border: none; cursor: pointer; padding: 12px 18px; border-radius: 999px; font-weight: 600; transition: transform .15s ease, box-shadow .15s ease, background .2s ease; }
+    .btn-primary { background: linear-gradient(135deg, var(--brand), #e0a861); color: #1a1a1a; box-shadow: 0 8px 18px rgba(241,194,125,.35); }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(241,194,125,.45); }
+    .btn-ghost { background: rgba(255,255,255,.06); color: var(--text); border: var(--border); }
+    .btn-ghost:hover { background: rgba(255,255,255,.12); }
+
+    /* Mobile menu */
+    .menu-toggle { display: none; background: transparent; color: var(--text); font-size: 26px; }
+    @media (max-width: 900px) {
+      .nav ul { display: none; position: absolute; left: 0; right: 0; top: 64px; background: rgba(15,18,33,.9); padding: 18px 22px; flex-direction: column; border-bottom: var(--border); }
+      .nav ul.open { display: flex; }
+      .menu-toggle { display: inline-grid; place-items: center; }
+      .cta-desktop { display: none; }
+    }
+
+    /* Hero */
+    .hero { position: relative; padding: 80px 0 60px; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
+    .eyebrow { color: var(--brand-2); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-size: .9rem; }
+    h1 { font-size: clamp(2rem, 4.3vw, 4rem); line-height: 1.1; margin: 10px 0 12px; }
+    .sub { color: var(--muted); font-size: clamp(1rem, 1.2vw, 1.2rem); }
+    .hero-actions { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+
+    .hero-card { background: var(--glass); border: var(--border); border-radius: var(--radius); padding: 18px; display: grid; grid-template-columns: 56px 1fr; gap: 14px; align-items: center; box-shadow: var(--shadow); }
+    .hero-card + .hero-card { margin-top: 12px; }
+    .icon { width: 56px; height: 56px; border-radius: 14px; display: grid; place-items: center; background: linear-gradient(135deg, rgba(241,194,125,.2), rgba(111,228,216,.2)); }
+
+    .hero .bg-blob { position: absolute; inset: -40px -80px auto auto; pointer-events: none; opacity: .5; filter: blur(60px); }
+
+    @media (max-width: 900px){
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Ribbon */
+    .ribbon { margin: 24px 0 0; padding: 10px 0; border-top: var(--border); border-bottom: var(--border); backdrop-filter: blur(6px); }
+    .ribbon ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+    .ribbon li { color: var(--muted); text-align: center; font-size: .95rem; }
+    @media (max-width: 800px){ .ribbon ul { grid-template-columns: repeat(2, 1fr); row-gap: 8px; } }
+
+    /* Section */
+    section { padding: 80px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 26px; }
+    .section-head h2 { margin: 0; font-size: clamp(1.6rem, 2.6vw, 2.6rem); }
+    .section-head p { margin: 0; color: var(--muted); }
+
+    /* Services */
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .card { grid-column: span 4; background: var(--card); border: var(--border); border-radius: var(--radius); padding: 20px; position: relative; overflow: hidden; transition: transform .2s ease, background .2s ease; backdrop-filter: blur(8px); }
+    .card:hover { transform: translateY(-4px); background: rgba(255,255,255, .1); }
+    .card h3 { margin: 6px 0 6px; font-size: 1.2rem; }
+    .card p { color: var(--muted); margin: 0; }
+    .chip { position: absolute; right: 12px; top: 12px; font-size: .75rem; padding: 6px 10px; border-radius: 999px; background: rgba(241,194,125,.14); border: 1px solid rgba(241,194,125,.4); color: #ffe7c3; }
+
+    @media (max-width: 1100px){ .card { grid-column: span 6; } }
+    @media (max-width: 700px){ .card { grid-column: span 12; } }
+
+    /* Gallery */
+    .gallery { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+    .shot { aspect-ratio: 4/3; border-radius: 16px; overflow: hidden; position: relative; border: var(--border); background: rgba(255,255,255,.06); }
+    .shot img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(1.05) contrast(1.02); transition: transform .4s ease; }
+    .shot:hover img { transform: scale(1.06); }
+    .shot:nth-child(1) { grid-column: span 3; }
+    .shot:nth-child(2) { grid-column: span 3; }
+    .shot:nth-child(3) { grid-column: span 2; }
+    .shot:nth-child(4) { grid-column: span 2; }
+    .shot:nth-child(5) { grid-column: span 2; }
+    @media (max-width: 900px){ .gallery { grid-template-columns: repeat(2, 1fr);} .shot { grid-column: span 1 !important; } }
+
+    /* Testimonials */
+    .testi-wrap { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--card); border: var(--border); box-shadow: var(--shadow); }
+    .track { display: flex; transition: transform .6s cubic-bezier(.2,.7,.1,1); }
+    .slide { min-width: 100%; padding: 28px; }
+    .quote { font-size: 1.1rem; }
+    .author { margin-top: 14px; color: var(--muted); }
+    .dots { position: absolute; right: 12px; bottom: 12px; display: flex; gap: 6px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.35); }
+    .dot.active { background: var(--brand); }
+
+    /* Process */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .step { background: var(--card); border: var(--border); padding: 20px; border-radius: var(--radius); }
+    .step .num { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #111; font-weight: 800; margin-bottom: 6px; }
+    .step p { margin: 4px 0 0; color: var(--muted); }
+    @media (max-width: 900px){ .steps { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px){ .steps { grid-template-columns: 1fr; } }
+
+    /* Contact */
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .contact .panel { background: var(--card); border: var(--border); border-radius: var(--radius); padding: 24px; }
+    .contact label { display: block; font-size: .95rem; margin-bottom: 6px; color: var(--muted); }
+    .contact input, .contact textarea, .contact select {
+      width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); color: var(--text);
+      outline: none; transition: border .2s ease, box-shadow .2s ease;
+    }
+    .contact input:focus, .contact textarea:focus, .contact select:focus { border-color: rgba(241,194,125,.7); box-shadow: 0 0 0 4px rgba(241,194,125,.15); }
+    .contact textarea { min-height: 120px; resize: vertical; }
+    @media (max-width: 900px){ .contact { grid-template-columns: 1fr; } }
+
+    /* CTA band */
+    .cta-band { background: linear-gradient(135deg, rgba(241,194,125,.09), rgba(111,228,216,.09)); border: var(--border); border-radius: var(--radius); padding: 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .cta-band p { margin: 0; color: var(--muted); }
+    @media (max-width: 700px){ .cta-band { flex-direction: column; align-items: start; } }
+
+    /* Footer */
+    footer { padding: 50px 0; border-top: var(--border); margin-top: 60px; }
+    .foot { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 18px; }
+    .foot a { color: var(--muted); text-decoration: none; }
+    .foot a:hover { color: var(--text); }
+    .subtle { color: var(--muted); font-size: .95rem; margin-top: 10px; }
+    @media (max-width: 900px){ .foot { grid-template-columns: 1fr; } }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+
+    /* Floating WhatsApp */
+    .whatsapp { position: fixed; right: 18px; bottom: 18px; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: #25D366; color: white; box-shadow: var(--shadow); text-decoration: none; font-weight: 700; z-index: 60; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <div class="logo" aria-hidden="true">ED</div>
+        <span>Elite Decorates</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">☰</button>
+
+      <ul id="navMenu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn btn-primary cta-desktop">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="hero">
+    <svg class="bg-blob" width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.6" filter="url(#f)"><circle cx="420" cy="80" r="160" fill="url(#g)"/></g>
+      <defs>
+        <filter id="f" x="0" y="-240" width="800" height="800" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+          <feGaussianBlur stdDeviation="60"/>
+        </filter>
+        <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(420 80) rotate(90) scale(160)">
+          <stop stop-color="#f1c27d"/>
+          <stop offset="1" stop-color="#6fe4d8"/>
+        </radialGradient>
+      </defs>
+    </svg>
+
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Premium Printing & Personalisation</div>
+        <h1>Crafting Memories, <span style="color:var(--brand)">One Print</span> at a Time</h1>
+        <p class="sub">We design and print wedding cards, custom bottles, frames, cups and T‑shirts—delivered with elegance and quality you can feel.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+          <a href="#gallery" class="btn btn-ghost">See Our Work</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="hero-card reveal">
+          <div class="icon" aria-hidden="true">💌</div>
+          <div>
+            <h3>Wedding & Invitation Cards</h3>
+            <p>Luxurious textures, foil finishes, and tailor‑made designs for your big day.</p>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <div class="icon" aria-hidden="true">🍾</div>
+          <div>
+            <h3>Bottle & Cup Printing</h3>
+            <p>Durable, vibrant prints for gifts, corporate events, and celebrations.</p>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <div class="icon" aria-hidden="true">👕</div>
+          <div>
+            <h3>Custom T‑Shirts & Frames</h3>
+            <p>High‑quality apparel and framed memories that last.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ribbon">
+      <div class="container">
+        <ul>
+          <li>✨ Unique Designs</li>
+          <li>🕒 Quick Turnaround</li>
+          <li>🖨️ Premium Quality Prints</li>
+          <li>💬 Friendly Support</li>
+          <li>📦 Pan‑India Delivery</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>Our Signature Services</h2>
+        <p>Everything you need to personalise your moments.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card reveal">
+          <span class="chip">Popular</span>
+          <div class="icon">💍</div>
+          <h3>Wedding Cards</h3>
+          <p>From classic to contemporary—handpicked papers, foils, and embossing to match your story.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🍾</div>
+          <h3>Bottle Printing</h3>
+          <p>Print on glass or metal bottles with vibrant inks that resist wear.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🖼️</div>
+          <h3>Custom Frames</h3>
+          <p>Premium frames with archival prints to protect your memories.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">☕</div>
+          <h3>Cup & Mug Printing</h3>
+          <p>Dishwasher‑safe prints for daily joy and thoughtful gifting.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">👕</div>
+          <h3>T‑Shirt Printing</h3>
+          <p>Crisp DTG, DTF, and vinyl prints with soft‑touch feel and longevity.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🎁</div>
+          <h3>Personalised Gifts</h3>
+          <p>Curated keepsakes for weddings, birthdays, and corporate moments.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <h2>Featured Gallery</h2>
+        <p>A glimpse of our recent work.</p>
+      </div>
+      <div class="gallery">
+        <figure class="shot reveal">
+          <img src="https://images.unsplash.com/photo-1545153996-0b4fd34a1a5c?q=80&w=1200&auto=format&fit=crop" alt="Elegant wedding invitation with gold foil"/>
+        </figure>
+        <figure class="shot reveal">
+          <img src="https://images.unsplash.com/photo-1603052875819-2ec7193b6b03?q=80&w=1200&auto=format&fit=crop" alt="Custom printed mugs and cups"/>
+        </figure>
+        <figure class="shot reveal">
+          <img src="https://images.unsplash.com/photo-1520975922284-7b9a72d4c0b0?q=80&w=1200&auto=format&fit=crop" alt="Framed photo decor"/>
+        </figure>
+        <figure class="shot reveal">
+          <img src="https://images.unsplash.com/photo-1516822003754-cca485356ecb?q=80&w=1200&auto=format&fit=crop" alt="Custom printed T‑shirt closeup"/>
+        </figure>
+        <figure class="shot reveal">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop" alt="Printed water bottles"/>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <h2>Loved by Our Clients</h2>
+        <p>Real words from real celebrations.</p>
+      </div>
+
+      <div class="testi-wrap reveal">
+        <div class="track" id="testiTrack">
+          <div class="slide">
+            <p class="quote">“Elite Decorates crafted our wedding invites exactly as we imagined—luxurious and elegant. Delivery was super quick too!”</p>
+            <p class="author">— Aisha & Rohan</p>
+          </div>
+          <div class="slide">
+            <p class="quote">“The printed bottles and mugs for our event were a hit. Colors were vibrant and long‑lasting.”</p>
+            <p class="author">— Meera, Event Planner</p>
+          </div>
+          <div class="slide">
+            <p class="quote">“Top‑notch quality on T‑shirts. Soft feel and the print still looks new after many washes.”</p>
+            <p class="author">— Karan, Startup Founder</p>
+          </div>
+        </div>
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process">
+    <div class="container">
+      <div class="section-head">
+        <h2>How It Works</h2>
+        <p>Simple steps from idea to delivery.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="num">1</div>
+          <h3>Share Your Idea</h3>
+          <p>Tell us what you want—theme, colors, quantity, and timeline.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">2</div>
+          <h3>Design & Proof</h3>
+          <p>We create mockups and refine based on your feedback.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">3</div>
+          <h3>Print & Finish</h3>
+          <p>Premium materials, careful finishing, and quality checks.</p>
+        </div>
+        <div class="step reveal">
+          <div class="num">4</div>
+          <h3>Deliver & Delight</h3>
+          <p>Secure packaging and doorstep delivery across India.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section>
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <h3>Ready to Personalise Your Story?</h3>
+          <p>Get a customised quote in under 24 hours.</p>
+        </div>
+        <a href="#contact" class="btn btn-primary">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container contact">
+      <div class="panel reveal">
+        <h2>Get a Free Quote</h2>
+        <p class="subtle">Tell us what you need and we’ll get back to you shortly.</p>
+        <form id="quoteForm">
+          <label for="name">Name</label>
+          <input id="name" name="name" placeholder="Your full name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required>
+
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Wedding Cards</option>
+            <option>Bottle Printing</option>
+            <option>Cup/Mug Printing</option>
+            <option>T‑Shirt Printing</option>
+            <option>Frames</option>
+            <option>Personalised Gifts</option>
+          </select>
+
+          <label for="message">Details</label>
+          <textarea id="message" name="message" placeholder="Quantity, sizes, colors, deadlines, etc." required></textarea>
+
+          <div style="display:flex; gap:10px; margin-top:12px; flex-wrap: wrap;">
+            <button class="btn btn-primary" type="submit">Request Quote</button>
+            <a class="btn btn-ghost" href="https://wa.me/919999999999" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          </div>
+          <p id="formMsg" class="subtle" style="margin-top:10px"></p>
+        </form>
+      </div>
+
+      <div class="panel reveal">
+        <h2>Visit / Contact</h2>
+        <p class="subtle">Elite Decorates — Where every detail matters.</p>
+        <p>📍 Srinagar, J&K (Pan‑India shipping)</p>
+        <p>📞 +91 99999 99999</p>
+        <p>✉️ hello@elitedecorates.com</p>
+
+        <div style="margin-top: 14px; display:flex; gap:10px; flex-wrap: wrap;">
+          <a class="btn btn-ghost" href="#gallery">Instagram</a>
+          <a class="btn btn-ghost" href="#">Facebook</a>
+          <a class="btn btn-ghost" href="#">Maps</a>
+        </div>
+
+        <div style="margin-top:18px;">
+          <iframe title="Map" width="100%" height="220" style="border:0; border-radius: 12px;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4215.282!2d74.8!3d34.08!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2z!5e0!3m2!1sen!2sin!4v0000000000"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <div>
+        <a class="brand" href="#top">
+          <div class="logo" aria-hidden="true">ED</div>
+          <span>Elite Decorates</span>
+        </a>
+        <p class="subtle">Premium printing & personalised gifting — wedding cards, bottles, frames, cups and T‑shirts. Unique, stylish, memorable.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <div style="display:grid; gap:6px; margin-top: 8px;">
+          <a href="#services">Services</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <div style="display:grid; gap:6px; margin-top: 8px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="border-top: var(--border); margin-top: 20px; padding-top: 12px; color: var(--muted); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+      <small>© <span id="year"></span> Elite Decorates. All rights reserved.</small>
+      <small>Crafted with ❤</small>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/919999999999" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle?.addEventListener('click', () => navMenu.classList.toggle('open'));
+
+    // Close mobile menu on link click
+    navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+    }, { threshold: .15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Testimonials slider (auto)
+    const track = document.getElementById('testiTrack');
+    const slides = Array.from(track.children);
+    const dotsWrap = document.getElementById('dots');
+    let idx = 0;
+    slides.forEach((_, i) => {
+      const d = document.createElement('div'); d.className = 'dot' + (i===0 ? ' active':'' ); dotsWrap.appendChild(d);
+    });
+    const update = () => {
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      dotsWrap.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i===idx));
+    };
+    setInterval(() => { idx = (idx + 1) % slides.length; update(); }, 4200);
+
+    // Form (demo only)
+    const form = document.getElementById('quoteForm');
+    const msg = document.getElementById('formMsg');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      // Simulate success
+      msg.textContent = `Thanks ${data.name}! Your ${data.service || 'project'} request is received. We'll respond shortly.`;
+      form.reset();
+    });
+  </script>
+</body>
+</html>
