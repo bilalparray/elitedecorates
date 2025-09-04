@@ -75,10 +75,11 @@ header {
   display: grid;
   place-items: center;
   box-shadow: var(--shadow);
-  img{
-    width: 24px;
+
+}
+.brand .logo .logoimage{
+width: 24px;
     height: 24px;
-  }
 }
 .brand span {
   font-weight: 700;
@@ -112,7 +113,7 @@ header {
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--brand), #e0a861);
+  background: linear-gradient(135deg, #1e1508, #e0a861);
   color: #1a1a1a;
   box-shadow: 0 8px 18px rgba(241, 194, 125, 0.35);
 }
