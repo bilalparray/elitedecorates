@@ -31,12 +31,25 @@
     setInterval(() => { idx = (idx + 1) % slides.length; update(); }, 4200);
 
     // Form (demo only)
-    const form = document.getElementById('quoteForm');
-    const msg = document.getElementById('formMsg');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(form).entries());
-      // Simulate success
-      msg.textContent = `Thanks ${data.name}! Your ${data.service || 'project'} request is received. We'll respond shortly.`;
-      form.reset();
-    });
+const form = document.getElementById('quoteForm');
+const msg = document.getElementById('formMsg');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  // WhatsApp number with country code (no +, no spaces)
+  const phoneNumber = "+917006465123"; // replace with your WhatsApp number
+
+  // Create message
+  const message = `Hello, my name is ${data.name}. I am interested in ${data.service || 'a project'}. Please contact me.`;
+
+  // Encode and open WhatsApp
+  const encodedMessage = encodeURIComponent(message);
+  window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+
+  // Optional UI feedback
+  msg.textContent = `Redirecting you to WhatsApp...`;
+  form.reset();
+});
+
