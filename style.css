@@ -1011,12 +1011,12 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   cursor: pointer;
   border: none;
-  color: white !important;
+  color: white ;
 }
 
 .btn--primary {
   background: var(--gradient-primary);
-  color: var(--white);
+  color: var(--white) !important;
   padding: var(--space-3) var(--space-6);
   box-shadow: var(--shadow-md);
 }
@@ -1029,7 +1029,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn--outline {
   background: transparent;
-  color: var(--primary-navy);
+  color: var(--primary-navy) !important;
   border: 2px solid var(--primary-navy);
   padding: calc(var(--space-3) - 2px) calc(var(--space-6) - 2px);
 }
