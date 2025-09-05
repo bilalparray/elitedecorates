@@ -1,333 +1,1003 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elite Decorates – Crafting Memories, One Print at a Time</title>
-  <meta name="description" content="Elite Decorates: Wedding cards, bottle printing, frames, custom cups & T‑shirts. Unique designs, premium quality, fast delivery." />
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="assets/ed.png" type="image/x-icon">
-
-  <!-- Google Font (optional) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Decorates - Premium Custom Printing & Decoration Services</title>
+    <meta name="description" content="Elite Decorates - Premium custom printing services including photo frames, mugs, business cards, wedding invitations, and personalized gifts. Quality craftsmanship since 2018.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#top">
-        <div class="logo" aria-hidden="true"><img class="logoimage" src="assets/ed.png" alt="logo"></div>
-        <span>Elite Decorates</span>
-      </a>
+    <!-- Premium Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top premium-nav">
+        <div class="container">
+            <a class="navbar-brand" href="javascript:void(0)" onclick="showPage('home')">
+                <div class="brand-container">
+                    <div class="brand-icon">
+                   <img src="assets/logo.png" alt="logo">
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">Elite Decorates</span>
+                        <span class="brand-tagline">Crafting Excellence</span>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler premium-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="showPage('products')">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="showPage('about')">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="showPage('privacy')">Privacy</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="showPage('terms')">Terms</a></li>
+                    <li class="nav-item">
+                        <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I%20would%20like%20to%20know%20more%20about%20your%20premium%20services." 
+                           class="btn btn--primary nav-cta" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>Get Quote
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-      <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">☰</button>
+    <!-- Homepage -->
+    <div id="page-home" class="page-content">
+        <!-- Premium Hero Section -->
+        <section class="premium-hero">
+            <div class="hero-background">
+                <div class="hero-pattern"></div>
+                <div class="hero-gradient"></div>
+            </div>
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <div class="hero-badge">
+                                <i class="fas fa-award me-2"></i>6+ Years of Excellence
+                            </div>
+                            <h1 class="hero-title">
+                                <span class="title-line">Premium Custom</span>
+                                <span class="title-line gradient-text">Printing & Decoration</span>
+                                <span class="title-line">Services</span>
+                            </h1>
+                            <p class="hero-description">
+                                Transform your vision into reality with our premium custom printing services. 
+                                From personalized photo frames to luxury business cards, we craft excellence in every detail.
+                            </p>
+                            <div class="hero-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">10,000+</div>
+                                    <div class="stat-label">Happy Customers</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">11</div>
+                                    <div class="stat-label">Premium Services</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">2-7</div>
+                                    <div class="stat-label">Days Delivery</div>
+                                </div>
+                            </div>
+                            <div class="hero-actions">
+                                <button class="btn btn--primary btn--hero" onclick="showPage('products')">
+                                    <i class="fas fa-palette me-2"></i>Explore Products
+                                </button>
+                                <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I%20need%20a%20custom%20quote." 
+                                   class="btn btn--outline btn--hero" target="_blank">
+                                    <i class="fab fa-whatsapp me-2"></i>Instant Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-visual">
+                            <div class="hero-image-container">
+                                <img src="https://pplx-res.cloudinary.com/image/upload/v1757046648/pplx_project_search_images/cb7a15297b88b2ffbe346fde8067b7969669e692.png" 
+                                     alt="Premium Custom Wallet" class="hero-image">
+                                <div class="image-overlay">
+                                    <div class="quality-badge">
+                                        <i class="fas fa-certificate"></i>
+                                        <span>Premium Quality</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="floating-cards">
+                                <div class="floating-card card-1">
+                                    <i class="fas fa-gift"></i>
+                                    <span>Custom Gifts</span>
+                                </div>
+                                <div class="floating-card card-2">
+                                    <i class="fas fa-print"></i>
+                                    <span>Premium Printing</span>
+                                </div>
+                                <div class="floating-card card-3">
+                                    <i class="fas fa-shipping-fast"></i>
+                                    <span>Fast Delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <ul id="navMenu">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+        <!-- Services Overview -->
+        <section class="services-showcase py-5">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <h2 class="section-title">Our Premium Services</h2>
+                    <p class="section-subtitle">Crafting personalized excellence across 11 specialized services</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card" onclick="showPage('photo-frames')">
+                        <div class="service-icon">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1757046648/pplx_project_search_images/cb7a15297b88b2ffbe346fde8067b7969669e692.png" alt="Custom Photo Frames">
+                        </div>
+                        <h3>Custom Photo Frames</h3>
+                        <p>Premium frames for your precious memories</p>
+                        <div class="service-price">From ₹399</div>
+                    </div>
 
-      <a href="#contact" class="btn btn-primary cta-desktop">Get a Quote</a>
+                    <div class="service-card" onclick="showPage('mugs-cups')">
+                        <div class="service-icon">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                        <h3>Printed Cups & Mugs</h3>
+                        <p>Personalized ceramic mugs for every occasion</p>
+                        <div class="service-price">From ₹249</div>
+                    </div>
+
+                    <div class="service-card" onclick="showPage('business-cards')">
+                        <div class="service-icon">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1754845389/pplx_project_search_images/a3d971c3d9f26fce0bd58fd649bc22c98bf1c374.png" alt="Business Cards">
+                        </div>
+                        <h3>Business Card Printing</h3>
+                        <p>Professional cards that make lasting impressions</p>
+                        <div class="service-price">From ₹199</div>
+                    </div>
+
+                    <div class="service-card" onclick="showPage('wedding-cards')">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Wedding Cards</h3>
+                        <p>Elegant invitations for your special day</p>
+                        <div class="service-price">From ₹25</div>
+                    </div>
+
+                    <div class="service-card" onclick="showPage('tshirts')">
+                        <div class="service-icon">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1754955455/pplx_project_search_images/24642d5436a10a20866907c86825bc4156d5cbaf.png" alt="T-Shirt Printing">
+                        </div>
+                        <h3>T-shirt Printing</h3>
+                        <p>High-quality custom apparel printing</p>
+                        <div class="service-price">From ₹399</div>
+                    </div>
+
+                    <div class="service-card" onclick="showPage('wallets')">
+                        <div class="service-icon">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1757046649/pplx_project_search_images/ac3c608df24260f75aac5cc011825c9f9663af0a.png" alt="Custom Wallets">
+                        </div>
+                        <h3>Custom Wallets</h3>
+                        <p>Luxury wallets with personal embossing</p>
+                        <div class="service-price">From ₹599</div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <button class="btn btn--primary btn--lg" onclick="showPage('products')">
+                        <i class="fas fa-arrow-right me-2"></i>View All Products
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-us py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="section-header mb-4">
+                            <h2 class="section-title">Why Choose Elite Decorates?</h2>
+                            <p class="section-subtitle">Your trusted partner for premium custom printing solutions</p>
+                        </div>
+                        
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Premium Quality</h4>
+                                    <p>Only the finest materials and professional craftsmanship for every order</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Fast Turnaround</h4>
+                                    <p>Quick processing and delivery without compromising on quality</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Custom Design</h4>
+                                    <p>Personalization options to match your unique vision and requirements</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Expert Support</h4>
+                                    <p>Dedicated customer service and consultation throughout your journey</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="why-choose-visual">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1757046647/pplx_project_search_images/811be8079b6881cd485a47c2526ae9f856bc668c.png" 
+                                 alt="Premium Quality Products" class="img-fluid rounded-3 shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="contact-cta py-5">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h2>Ready to Bring Your Vision to Life?</h2>
+                            <p>Contact us today for a personalized quote and let's create something amazing together.</p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end">
+                            <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I%20need%20a%20custom%20quote%20for%20my%20project." 
+                               class="btn btn--primary btn--lg" target="_blank">
+                                <i class="fab fa-whatsapp me-2"></i>Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </header>
 
-  <!-- Hero -->
-  <main id="top" class="hero">
-    <svg class="bg-blob" width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g opacity="0.6" filter="url(#f)"><circle cx="420" cy="80" r="160" fill="url(#g)"/></g>
-      <defs>
-        <filter id="f" x="0" y="-240" width="800" height="800" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-          <feGaussianBlur stdDeviation="60"/>
-        </filter>
-        <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(420 80) rotate(90) scale(160)">
-          <stop stop-color="#f1c27d"/>
-          <stop offset="1" stop-color="#6fe4d8"/>
-        </radialGradient>
-      </defs>
-    </svg>
+    <!-- Products Page -->
+    <div id="page-products" class="page-content d-none">
+        <section class="products-hero py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h1 class="page-title gradient-text">Our Premium Products</h1>
+                    <p class="page-subtitle">Discover our complete range of custom printing and decoration services</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card premium" onclick="showPage('photo-frames')">
+                        <div class="product-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1757046648/pplx_project_search_images/cb7a15297b88b2ffbe346fde8067b7969669e692.png" alt="Custom Photo Frames">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <button class="btn btn--primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Custom Photo Frames</h3>
+                            <p>Frame Your Precious Memories</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Premium Wood</span>
+                                <span class="feature-tag">Custom Engraving</span>
+                            </div>
+                            <div class="product-price">₹399 - ₹1,299</div>
+                        </div>
+                    </div>
 
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Premium Printing & Personalisation</div>
-        <h1>Crafting Memories, <span style="color:var(--brand)">One Print</span> at a Time</h1>
-        <p class="sub">We design and print wedding cards, custom bottles, frames, cups and T‑shirts—delivered with elegance and quality you can feel.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-          <a href="#gallery" class="btn btn-ghost">See Our Work</a>
-        </div>
-      </div>
+                    <div class="product-card premium" onclick="showPage('business-cards')">
+                        <div class="product-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1754845389/pplx_project_search_images/a3d971c3d9f26fce0bd58fd649bc22c98bf1c374.png" alt="Business Cards">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <button class="btn btn--primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Business Card Printing</h3>
+                            <p>First Impressions That Last</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Gold Foil</span>
+                                <span class="feature-tag">Premium Finish</span>
+                            </div>
+                            <div class="product-price">₹199 - ₹799</div>
+                        </div>
+                    </div>
 
-      <div>
-        <div class="hero-card reveal">
-          <div class="icon" aria-hidden="true">💌</div>
-          <div>
-            <h3>Wedding & Invitation Cards</h3>
-            <p>Luxurious textures, foil finishes, and tailor‑made designs for your big day.</p>
-          </div>
-        </div>
-        <div class="hero-card reveal">
-          <div class="icon" aria-hidden="true">🍾</div>
-          <div>
-            <h3>Bottle & Cup Printing</h3>
-            <p>Durable, vibrant prints for gifts, corporate events, and celebrations.</p>
-          </div>
-        </div>
-        <div class="hero-card reveal">
-          <div class="icon" aria-hidden="true">👕</div>
-          <div>
-            <h3>Custom T‑Shirts & Frames</h3>
-            <p>High‑quality apparel and framed memories that last.</p>
-          </div>
-        </div>
-      </div>
+                    <div class="product-card premium" onclick="showPage('wallets')">
+                        <div class="product-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1757046649/pplx_project_search_images/ac3c608df24260f75aac5cc011825c9f9663af0a.png" alt="Custom Wallets">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <button class="btn btn--primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Custom Wallets</h3>
+                            <p>Carry Your Style, Showcase Your Identity</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Genuine Leather</span>
+                                <span class="feature-tag">RFID Blocking</span>
+                            </div>
+                            <div class="product-price">₹599 - ₹1,499</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card premium" onclick="showPage('bookmarks')">
+                        <div class="product-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1757046647/pplx_project_search_images/e17a67e8a3abe9d484bacac89371e6a5ba4e9b8a.png" alt="Custom Bookmarks">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <button class="btn btn--primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Custom Bookmarks</h3>
+                            <p>Mark Your Place in Style</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Premium Cardstock</span>
+                                <span class="feature-tag">Waterproof</span>
+                            </div>
+                            <div class="product-price">₹99 - ₹299</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card premium" onclick="showPage('tshirts')">
+                        <div class="product-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1754955455/pplx_project_search_images/24642d5436a10a20866907c86825bc4156d5cbaf.png" alt="T-Shirt Printing">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <button class="btn btn--primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Custom T-shirt Printing</h3>
+                            <p>Wear Your Creativity</p>
+                            <div class="product-features">
+                                <span class="feature-tag">100% Cotton</span>
+                                <span class="feature-tag">All Sizes</span>
+                            </div>
+                            <div class="product-price">₹399 - ₹899</div>
+                        </div>
+                    </div>
+
+                    <div class="product-card premium" onclick="showPage('mugs-cups')">
+                        <div class="product-image">
+                            <div class="icon-placeholder">
+                                <i class="fas fa-mug-hot"></i>
+                            </div>
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <button class="btn btn--primary">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Printed Cups & Mugs</h3>
+                            <p>Start Every Day with Personalized Joy</p>
+                            <div class="product-features">
+                                <span class="feature-tag">Ceramic</span>
+                                <span class="feature-tag">Dishwasher Safe</span>
+                            </div>
+                            <div class="product-price">₹249 - ₹599</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <div class="ribbon">
-      <div class="container">
-        <ul>
-          <li>✨ Unique Designs</li>
-          <li>🕒 Quick Turnaround</li>
-          <li>🖨️ Premium Quality Prints</li>
-          <li>💬 Friendly Support</li>
-          <li>📦 Pan‑India Delivery</li>
-        </ul>
-      </div>
+    <!-- About Page -->
+    <div id="page-about" class="page-content d-none">
+        <section class="about-hero py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="page-title gradient-text">About Elite Decorates</h1>
+                        <p class="page-subtitle mb-4">Crafting Excellence in Every Detail Since 2018</p>
+                        <p class="lead">We are your premier destination for custom printing and decoration services, combining traditional craftsmanship with modern innovation to deliver exceptional quality products.</p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <div class="stat-number">6+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">10,000+</div>
+                                <div class="stat-label">Happy Customers</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">11</div>
+                                <div class="stat-label">Premium Services</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1757046647/pplx_project_search_images/811be8079b6881cd485a47c2526ae9f856bc668c.png" 
+                             alt="About Elite Decorates" class="img-fluid rounded-3 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="company-values py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Our Values</h2>
+                    <p class="section-subtitle">What drives us to deliver excellence every day</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Quality First</h3>
+                        <p>We never compromise on quality, using only premium materials and professional techniques.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Customer Centric</h3>
+                        <p>Your satisfaction is our priority. We go above and beyond to exceed expectations.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>Constantly evolving our techniques and services to offer the latest in custom printing.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Reliability</h3>
+                        <p>Dependable service with consistent quality and timely delivery you can count on.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </main>
 
-  <!-- Services -->
-  <section id="services">
-    <div class="container">
-      <div class="section-head">
-        <h2>Our Signature Services</h2>
-        <p>Everything you need to personalise your moments.</p>
-      </div>
+    <!-- Premium Product Pages -->
+    <div id="page-photo-frames" class="page-content product-detail-page d-none">
+        <div class="product-breadcrumb">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="showPage('products')">Products</a></li>
+                        <li class="breadcrumb-item active">Custom Photo Frames</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
 
-      <div class="grid">
-        <article class="card reveal">
-          <span class="chip">Popular</span>
-          <div class="icon">💍</div>
-          <h3>Wedding Cards</h3>
-          <p>From classic to contemporary—handpicked papers, foils, and embossing to match your story.</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">🍾</div>
-          <h3>Bottle Printing</h3>
-          <p>Print on glass or metal bottles with vibrant inks that resist wear.</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">🖼️</div>
-          <h3>Custom Frames</h3>
-          <p>Premium frames with archival prints to protect your memories.</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">☕</div>
-          <h3>Cup & Mug Printing</h3>
-          <p>Dishwasher‑safe prints for daily joy and thoughtful gifting.</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">👕</div>
-          <h3>T‑Shirt Printing</h3>
-          <p>Crisp DTG, DTF, and vinyl prints with soft‑touch feel and longevity.</p>
-        </article>
-        <article class="card reveal">
-          <div class="icon">🎁</div>
-          <h3>Personalised Gifts</h3>
-          <p>Curated keepsakes for weddings, birthdays, and corporate moments.</p>
-        </article>
-      </div>
+        <section class="product-hero-detail py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="product-gallery">
+                            <div class="main-image">
+                                <img src="https://pplx-res.cloudinary.com/image/upload/v1757046648/pplx_project_search_images/cb7a15297b88b2ffbe346fde8067b7969669e692.png" 
+                                     alt="Premium Custom Photo Frame" class="img-fluid rounded-3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="product-details">
+                            <div class="product-badge">Premium Quality</div>
+                            <h1 class="product-title">Custom Photo Frames</h1>
+                            <p class="product-tagline">Frame Your Precious Memories</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">4.9/5 (450+ reviews)</span>
+                            </div>
+                            <div class="product-price-range">₹399 - ₹1,299</div>
+                            <p class="product-description">
+                                Transform your favorite moments into stunning displays with our premium custom photo frames. 
+                                Crafted from high-quality materials with professional finishing, perfect for home décor or meaningful gifts.
+                            </p>
+                            
+                            <div class="product-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Premium wood and metal materials</li>
+                                    <li><i class="fas fa-check"></i> Multiple size options (4x6" to 16x20")</li>
+                                    <li><i class="fas fa-check"></i> Custom engraving available</li>
+                                    <li><i class="fas fa-check"></i> Professional finishing</li>
+                                    <li><i class="fas fa-check"></i> Bulk discounts for 10+ pieces</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="product-actions">
+                                <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I'm%20interested%20in%20Custom%20Photo%20Frames.%20Please%20provide%20pricing%20and%20customization%20details." 
+                                   class="btn btn--primary btn--lg" target="_blank">
+                                    <i class="fab fa-whatsapp me-2"></i>Order Now
+                                </a>
+                                <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I%20need%20a%20quote%20for%20Custom%20Photo%20Frames." 
+                                   class="btn btn--outline btn--lg" target="_blank">
+                                    Get Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-specifications py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="spec-section">
+                            <h3>Specifications & Sizes</h3>
+                            <div class="spec-grid">
+                                <div class="spec-item">
+                                    <h5>Materials Available</h5>
+                                    <p>Premium Wood, Metal Alloy, Acrylic Glass, MDF Board</p>
+                                </div>
+                                <div class="spec-item">
+                                    <h5>Turnaround Time</h5>
+                                    <p>3-5 business days</p>
+                                </div>
+                                <div class="spec-item">
+                                    <h5>Customization</h5>
+                                    <p>Name/Text Engraving, Custom Colors, Special Finishes</p>
+                                </div>
+                                <div class="spec-item">
+                                    <h5>Minimum Order</h5>
+                                    <p>1 piece (Bulk discounts available)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="size-pricing">
+                                <h4>Size & Pricing Options</h4>
+                                <div class="pricing-table">
+                                    <div class="pricing-row">
+                                        <span class="size">4x6 inches</span>
+                                        <span class="price">₹399</span>
+                                    </div>
+                                    <div class="pricing-row">
+                                        <span class="size">5x7 inches</span>
+                                        <span class="price">₹499</span>
+                                    </div>
+                                    <div class="pricing-row">
+                                        <span class="size">8x10 inches</span>
+                                        <span class="price">₹699</span>
+                                    </div>
+                                    <div class="pricing-row">
+                                        <span class="size">11x14 inches</span>
+                                        <span class="price">₹899</span>
+                                    </div>
+                                    <div class="pricing-row highlighted">
+                                        <span class="size">16x20 inches</span>
+                                        <span class="price">₹1,299</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="order-summary">
+                            <h4>Order Information</h4>
+                            <div class="summary-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Delivery Time</strong>
+                                    <span>3-5 business days</span>
+                                </div>
+                            </div>
+                            <div class="summary-item">
+                                <i class="fas fa-gift"></i>
+                                <div>
+                                    <strong>Gift Wrapping</strong>
+                                    <span>Free with every order</span>
+                                </div>
+                            </div>
+                            <div class="summary-item">
+                                <i class="fas fa-percentage"></i>
+                                <div>
+                                    <strong>Bulk Discount</strong>
+                                    <span>10+ pieces: 15% off</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I%20need%20an%20instant%20quote%20for%20Custom%20Photo%20Frames." 
+                               class="btn btn--primary w-100 mt-3" target="_blank">
+                                <i class="fab fa-whatsapp me-2"></i>Get Instant Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </section>
 
-  <!-- Gallery -->
-  <section id="gallery">
-    <div class="container">
-      <div class="section-head">
-        <h2>Featured Gallery</h2>
-        <p>A glimpse of our recent work.</p>
-      </div>
-      <div class="gallery">
-        <figure class="shot reveal">
-          <img src="https://plus.unsplash.com/premium_photo-1696972235467-6820100b603f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Elegant wedding invitation with gold foil"/>
-        </figure>
-        <figure class="shot reveal">
-          <img src="https://images.unsplash.com/photo-1609616512212-ac7bf2536f15?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Custom printed mugs and cups"/>
-        </figure>
-        <figure class="shot reveal">
-          <img src="https://cdn.pixabay.com/photo/2024/04/17/18/40/ai-generated-8702729_1280.jpg" alt="Framed photo decor"/>
-        </figure>
-        <figure class="shot reveal">
-          <img src="https://cdn.pixabay.com/photo/2024/01/16/09/24/ai-generated-8511706_1280.png" alt="Custom printed T‑shirt closeup"/>
-        </figure>
-        <figure class="shot reveal">
-          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop" alt="Printed water bottles"/>
-        </figure>
-      </div>
+    <!-- Business Cards Detail Page -->
+    <div id="page-business-cards" class="page-content product-detail-page d-none">
+        <div class="product-breadcrumb">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="showPage('products')">Products</a></li>
+                        <li class="breadcrumb-item active">Business Card Printing</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <section class="product-hero-detail py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="product-gallery">
+                            <div class="main-image">
+                                <img src="https://pplx-res.cloudinary.com/image/upload/v1754845389/pplx_project_search_images/a3d971c3d9f26fce0bd58fd649bc22c98bf1c374.png" 
+                                     alt="Premium Business Cards" class="img-fluid rounded-3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="product-details">
+                            <div class="product-badge">Professional Grade</div>
+                            <h1 class="product-title">Business Card Printing</h1>
+                            <p class="product-tagline">First Impressions That Last</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">4.8/5 (320+ reviews)</span>
+                            </div>
+                            <div class="product-price-range">₹199 - ₹799</div>
+                            <p class="product-description">
+                                Make every introduction memorable with our premium business cards. From standard to luxury finishes, 
+                                featuring gold foil, embossing, and premium materials that reflect your professional brand.
+                            </p>
+                            
+                            <div class="product-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Professional design service</li>
+                                    <li><i class="fas fa-check"></i> Same-day printing available</li>
+                                    <li><i class="fas fa-check"></i> Multiple premium finishes</li>
+                                    <li><i class="fas fa-check"></i> Gold/Silver foil options</li>
+                                    <li><i class="fas fa-check"></i> Digital proofing included</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="product-actions">
+                                <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I'm%20interested%20in%20Business%20Card%20Printing.%20Please%20provide%20pricing%20details." 
+                                   class="btn btn--primary btn--lg" target="_blank">
+                                    <i class="fab fa-whatsapp me-2"></i>Order Now
+                                </a>
+                                <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I%20need%20a%20quote%20for%20Business%20Cards." 
+                                   class="btn btn--outline btn--lg" target="_blank">
+                                    Get Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials">
-    <div class="container">
-      <div class="section-head">
-        <h2>Loved by Our Clients</h2>
-        <p>Real words from real celebrations.</p>
-      </div>
-
-      <div class="testi-wrap reveal">
-        <div class="track" id="testiTrack">
-          <div class="slide">
-            <p class="quote">“Elite Decorates crafted our wedding invites exactly as we imagined—luxurious and elegant. Delivery was super quick too!”</p>
-            <p class="author">— Aisha & Rohan</p>
-          </div>
-          <div class="slide">
-            <p class="quote">“The printed bottles and mugs for our event were a hit. Colors were vibrant and long‑lasting.”</p>
-            <p class="author">— Meera, Event Planner</p>
-          </div>
-          <div class="slide">
-            <p class="quote">“Top‑notch quality on T‑shirts. Soft feel and the print still looks new after many washes.”</p>
-            <p class="author">— Karan, Startup Founder</p>
-          </div>
+    <!-- Add more product detail pages with similar structure -->
+    <div id="page-wallets" class="page-content product-detail-page d-none">
+        <div class="product-breadcrumb">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
+                        <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="showPage('products')">Products</a></li>
+                        <li class="breadcrumb-item active">Custom Wallets</li>
+                    </ol>
+                </nav>
+            </div>
         </div>
-        <div class="dots" id="dots"></div>
-      </div>
+
+        <section class="product-hero-detail py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="product-gallery">
+                            <div class="main-image">
+                                <img src="https://pplx-res.cloudinary.com/image/upload/v1757046649/pplx_project_search_images/ac3c608df24260f75aac5cc011825c9f9663af0a.png" 
+                                     alt="Custom Leather Wallet" class="img-fluid rounded-3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="product-details">
+                            <div class="product-badge">Luxury Craft</div>
+                            <h1 class="product-title">Custom Wallets</h1>
+                            <p class="product-tagline">Carry Your Style, Showcase Your Identity</p>
+                            <div class="product-rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">4.9/5 (280+ reviews)</span>
+                            </div>
+                            <div class="product-price-range">₹599 - ₹1,499</div>
+                            <p class="product-description">
+                                Luxury personalized wallets crafted from premium leather with custom embossing and printing. 
+                                Features RFID blocking technology and comes with lifetime craftsmanship warranty.
+                            </p>
+                            
+                            <div class="product-features">
+                                <h4>Key Features:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Genuine leather construction</li>
+                                    <li><i class="fas fa-check"></i> RFID blocking options available</li>
+                                    <li><i class="fas fa-check"></i> Custom embossing and printing</li>
+                                    <li><i class="fas fa-check"></i> Premium gift box included</li>
+                                    <li><i class="fas fa-check"></i> Lifetime craftsmanship warranty</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="product-actions">
+                                <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I'm%20interested%20in%20Custom%20Wallets.%20Please%20provide%20pricing%20details." 
+                                   class="btn btn--primary btn--lg" target="_blank">
+                                    <i class="fab fa-whatsapp me-2"></i>Order Now
+                                </a>
+                                <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I%20need%20a%20quote%20for%20Custom%20Wallets." 
+                                   class="btn btn--outline btn--lg" target="_blank">
+                                    Get Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </section>
 
-  <!-- Process -->
-  <section id="process">
-    <div class="container">
-      <div class="section-head">
-        <h2>How It Works</h2>
-        <p>Simple steps from idea to delivery.</p>
-      </div>
-      <div class="steps">
-        <div class="step reveal">
-          <div class="num">1</div>
-          <h3>Share Your Idea</h3>
-          <p>Tell us what you want—theme, colors, quantity, and timeline.</p>
+    <!-- Add placeholder pages for other products -->
+    <div id="page-mugs-cups" class="page-content d-none">
+        <div class="container py-5" style="padding-top: 120px;">
+            <h1 class="page-title gradient-text">Printed Cups & Mugs</h1>
+            <p class="lead">Start Every Day with Personalized Joy</p>
+            <p>Price Range: ₹249 - ₹599</p>
+            <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I'm%20interested%20in%20Mugs%20and%20Cups." 
+               class="btn btn--primary" target="_blank">
+                <i class="fab fa-whatsapp me-2"></i>Order Now
+            </a>
         </div>
-        <div class="step reveal">
-          <div class="num">2</div>
-          <h3>Design & Proof</h3>
-          <p>We create mockups and refine based on your feedback.</p>
-        </div>
-        <div class="step reveal">
-          <div class="num">3</div>
-          <h3>Print & Finish</h3>
-          <p>Premium materials, careful finishing, and quality checks.</p>
-        </div>
-        <div class="step reveal">
-          <div class="num">4</div>
-          <h3>Deliver & Delight</h3>
-          <p>Secure packaging and doorstep delivery across India.</p>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- CTA Band -->
-  <section>
-    <div class="container">
-      <div class="cta-band reveal">
-        <div>
-          <h3>Ready to Personalise Your Story?</h3>
-          <p>Get a customised quote in under 24 hours.</p>
+    <div id="page-tshirts" class="page-content d-none">
+        <div class="container py-5" style="padding-top: 120px;">
+            <h1 class="page-title gradient-text">Custom T-shirt Printing</h1>
+            <p class="lead">Wear Your Creativity</p>
+            <p>Price Range: ₹399 - ₹899</p>
+            <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I'm%20interested%20in%20T-shirt%20Printing." 
+               class="btn btn--primary" target="_blank">
+                <i class="fab fa-whatsapp me-2"></i>Order Now
+            </a>
         </div>
-        <a href="#contact" class="btn btn-primary">Start Your Project</a>
-      </div>
     </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container contact">
-      <div class="panel reveal">
-        <h2>Get a Free Quote</h2>
-        <p class="subtle">Tell us what you need and we’ll get back to you shortly.</p>
-        <form id="quoteForm">
-          <label for="name">Name</label>
-          <input id="name" name="name" placeholder="Your full name" required>
-
-          <label for="service">Service</label>
-          <select id="service" name="service" required>
-            <option value="">Select a service</option>
-            <option>Wedding Cards</option>
-            <option>Bottle Printing</option>
-            <option>Cup/Mug Printing</option>
-            <option>T‑Shirt Printing</option>
-            <option>Frames</option>
-            <option>Personalised Gifts</option>
-          </select>
-
-          <label for="message">Details</label>
-          <textarea id="message" name="message" placeholder="Quantity, sizes, colors, deadlines, etc." required></textarea>
-
-          <div style="display:flex; gap:10px; margin-top:12px; flex-wrap: wrap;">
-            <button class="btn btn-primary" type="submit">Request Quote</button>
-            <a class="btn btn-ghost" href="https://wa.me/+917006465123" target="_blank" rel="noopener">Chat on WhatsApp</a>
-          </div>
-          <p id="formMsg" class="subtle" style="margin-top:10px"></p>
-        </form>
-      </div>
-
-      <div class="panel reveal">
-        <h2>Visit / Contact</h2>
-        <p class="subtle">Elite Decorates — Where every detail matters.</p>
-        <p>📍 Srinagar, J&K (Pan‑India shipping)</p>
-        <p>📞 +917006465123 </p>
-        <!-- <p>✉️ hello@elitedecorates.com</p> -->
-
-        <div style="margin-top: 14px; display:flex; gap:10px; flex-wrap: wrap;">
-          <a class="btn btn-ghost" href="https://www.instagram.com/elitedecorates/">Instagram</a>
-          <a class="btn btn-ghost" href="https://www.youtube.com/@elitedecorates">Youtube</a>
+    <div id="page-bookmarks" class="page-content d-none">
+        <div class="container py-5" style="padding-top: 120px;">
+            <h1 class="page-title gradient-text">Custom Bookmarks</h1>
+            <p class="lead">Mark Your Place in Style</p>
+            <p>Price Range: ₹99 - ₹299</p>
+            <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I'm%20interested%20in%20Custom%20Bookmarks." 
+               class="btn btn--primary" target="_blank">
+                <i class="fab fa-whatsapp me-2"></i>Order Now
+            </a>
         </div>
-
-        <div style="margin-top:18px;">
-          <iframe title="Map" width="100%" height="220" style="border:0; border-radius: 12px;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4215.282!2d74.8!3d34.08!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2z!5e0!3m2!1sen!2sin!4v0000000000"></iframe>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <footer>
-    <div class="container foot">
-      <div>
-        <a class="brand" href="#top">
-          <div class="logo" aria-hidden="true">ED</div>
-          <span>Elite Decorates</span>
-        </a>
-        <p class="subtle">Premium printing & personalised gifting — wedding cards, bottles, frames, cups and T‑shirts. Unique, stylish, memorable.</p>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <div style="display:grid; gap:6px; margin-top: 8px;">
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
+    <div id="page-wedding-cards" class="page-content d-none">
+        <div class="container py-5" style="padding-top: 120px;">
+            <h1 class="page-title gradient-text">Wedding Cards</h1>
+            <p class="lead">Announcing Your Perfect Beginning</p>
+            <p>Price Range: ₹25 - ₹200</p>
+            <a href="https://wa.me/917006465123?text=Hello%20Elite%20Decorates!%20I'm%20interested%20in%20Wedding%20Cards." 
+               class="btn btn--primary" target="_blank">
+                <i class="fab fa-whatsapp me-2"></i>Order Now
+            </a>
         </div>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <div style="display:grid; gap:6px; margin-top: 8px;">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms</a>
+    </div>
+
+    <!-- Privacy Policy Page -->
+    <div id="page-privacy" class="page-content d-none">
+        <section class="py-5" style="padding-top: 120px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="page-title gradient-text mb-4">Privacy Policy</h1>
+                        <p class="mb-4"><strong>Last updated:</strong> January 2025</p>
+                        
+                        <div class="policy-content">
+                            <h4>Information We Collect</h4>
+                            <p>We collect information you provide directly to us, such as when you create an account, make a purchase, or contact us. This may include your name, email address, phone number, shipping address, and payment information.</p>
+                            
+                            <h4>How We Use Your Information</h4>
+                            <p>We use the information we collect to provide, maintain, and improve our services, process transactions, send you technical notices and support messages, and respond to your comments and questions.</p>
+                            
+                            <h4>Information Sharing</h4>
+                            <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this privacy policy.</p>
+                            
+                            <h4>Data Security</h4>
+                            <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+                            
+                            <h4>Contact Us</h4>
+                            <p>If you have any questions about this Privacy Policy, please contact us at info@elitedecorates.com</p>
+                        </div>
+                        
+                        <button class="btn btn--secondary mt-4" onclick="showPage('home')">Back to Home</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Terms and Conditions Page -->
+    <div id="page-terms" class="page-content d-none">
+        <section class="py-5" style="padding-top: 120px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="page-title gradient-text mb-4">Terms & Conditions</h1>
+                        <p class="mb-4"><strong>Last updated:</strong> January 2025</p>
+                        
+                        <div class="policy-content">
+                            <h4>Order Processing</h4>
+                            <p>Orders are processed within 2-3 business days. Custom items may require additional time depending on complexity. We will notify you of any delays.</p>
+                            
+                            <h4>Payment Terms</h4>
+                            <p>Payment is required in full before order processing begins. We accept various payment methods including cash, UPI, and bank transfers.</p>
+                            
+                            <h4>Customization Policy</h4>
+                            <p>All custom orders are final and non-refundable once production begins. Please review all details carefully before confirming your order.</p>
+                            
+                            <h4>Quality Guarantee</h4>
+                            <p>We guarantee the quality of our products. If you receive a defective item, please contact us within 48 hours for a replacement.</p>
+                            
+                            <h4>Delivery</h4>
+                            <p>Delivery times vary based on location and product type. We are not responsible for delays caused by courier services or unforeseen circumstances.</p>
+                            
+                            <h4>Intellectual Property</h4>
+                            <p>Customers are responsible for ensuring they have rights to any images, logos, or designs used in custom orders.</p>
+                        </div>
+                        
+                        <button class="btn btn--secondary mt-4" onclick="showPage('home')">Back to Home</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Premium Footer -->
+    <footer class="premium-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="footer-brand">
+                            <div class="brand-container">
+                                <div class="brand-icon">
+                                    <img src="assets/logo.png" alt="logo">
+                                </div>
+                                <div class="brand-text">
+                                    <span class="brand-name">Elite Decorates</span>
+                                    <span class="brand-tagline">Crafting Excellence</span>
+                                </div>
+                            </div>
+                            <p class="footer-description">
+                                Your premier destination for custom printing and decoration services. 
+                                Transforming your ideas into beautiful, personalized products with unmatched quality.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
+                            <li><a href="javascript:void(0)" onclick="showPage('products')">Products</a></li>
+                            <li><a href="javascript:void(0)" onclick="showPage('about')">About Us</a></li>
+                            <li><a href="javascript:void(0)" onclick="showPage('privacy')">Privacy</a></li>
+                            <li><a href="javascript:void(0)" onclick="showPage('terms')">Terms</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="footer-title">Services</h5>
+                        <ul class="footer-links">
+                            <li><a href="javascript:void(0)" onclick="showPage('photo-frames')">Photo Frames</a></li>
+                            <li><a href="javascript:void(0)" onclick="showPage('business-cards')">Business Cards</a></li>
+                            <li><a href="javascript:void(0)" onclick="showPage('wallets')">Custom Wallets</a></li>
+                            <li><a href="javascript:void(0)" onclick="showPage('tshirts')">T-shirt Printing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <h5 class="footer-title">Contact Info</h5>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91 700 6465 123</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>no email yet</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Shop No. 123, Main Market<br>Srinagar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 Elite Decorates. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="https://wa.me/917006465123" class="btn btn--primary btn--sm" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>Connect on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="container" style="border-top: var(--border); margin-top: 20px; padding-top: 12px; color: var(--muted); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
-      <small>© <span id="year"></span> Elite Decorates. All rights reserved.</small>
-      <small>Crafted with ❤</small>
-    </div>
-  </footer>
+    </footer>
 
-  <a class="whatsapp" href="https://wa.me/917006465123" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
-
-<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
