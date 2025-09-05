@@ -1011,6 +1011,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   cursor: pointer;
   border: none;
+  color: white !important;
 }
 
 .btn--primary {
@@ -1413,12 +1414,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .cta-card .btn--primary {
   background: var(--white);
-  color: var(--primary-navy);
+  color: var(--primary-navy) !important;
 }
-
+.viewallproducts:hover{
+background-color: white;
+color: var(--primary-navy) !important;
+}
 .cta-card .btn--primary:hover {
   background: var(--gray-100);
-  color: var(--primary-navy);
+  color: var(--primary-navy) !important;
 }
 
 /* Products Page */
