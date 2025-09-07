@@ -1,0 +1,7 @@
+User-agent: *
+Disallow:
+
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://elitedecorates.com/sitemap.xml
